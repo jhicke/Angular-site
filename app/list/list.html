@@ -1,0 +1,27 @@
+<script src="list.animation.js"></script>
+<link rel="stylesheet" href="list/list.css" class="listItem"/>
+<p> dynamic list </p>
+
+<div class ='list'>
+	<li class= 'listItem' ng-repeat="item in items" >
+		<span>{{item.name}}</span>
+		<span>{{item.date}}</span>
+
+	</li>
+</div>
+<p> form </p>
+
+<div class ='list' name = 'listFormDiv'>
+	<form name="listForm" novalidate>
+		<div class='list-group listItem' ng-repeat='item in items'  >
+		<ng-form name='listForm'>
+			<input type="string" class='list-input' name='ListName' ng-model='item.name' value= 'item.name'  required>
+			<input type="date" class="list-input" name="listDate" ng-model="item.date" required>
+			<p class="help-block" ng-show="listForm.date.$invalid">Valid Date Required</p>
+
+		</ng-form>
+		</div>
+		<input type ='button' class='list-button' value ='+' name= 'listAdd' ng-click ='addNew()'>
+	</form>
+
+</div>

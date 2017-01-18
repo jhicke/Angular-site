@@ -1,32 +1,39 @@
-/* app css stylesheet */
+/* app css stylesheet  background (light grey) #D4D4D4 
+foreground(midnight blue) #152C4D
+highlight (San Marino blue) #4D6A93   */
 body {
 	padding: 20px;
-	background-color: #EEEEEE;
+	background-color: #D4d4d4;
 }
 
 .menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+   list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #152C4D;
 }
 
-.menu:before {
-  content: "[";
-}
-
-.menu:after {
-  content: "]";
-}
 
 .menu > li {
-  display: inline;
+  float: left;
+  border-right: 1px solid #6D6D6D;
 }
 
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+.menu > li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
+
+.menu > li a:hover {
+    background-color: #4D6A93;
+
+
+}
+
 
 .list {
 	list-style: none;
